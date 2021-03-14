@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-row no-gutters justify="center" align="start">
-      <v-col cols="12" sm="10" md="7">
+      <v-col cols="12" md="10" lg="7">
         <v-row no-gutters style="overflow-x: auto">
           <v-col xl="auto">
             <v-btn
@@ -104,7 +104,7 @@
       </v-col>
     </v-row>
     <v-row no-gutters justify="center" class="header">
-      <v-col cols="12" sm="10" md="7">
+      <v-col cols="12" md="10" lg="7">
         <v-row no-gutters justify="center" style="overflow-x: auto">
           <v-col cols="auto">
             <v-row no-gutters>
@@ -226,7 +226,6 @@
                   <v-col cols="12" tag="search">
                     <v-text-field
                       label="Busca Portal UFLA"
-                      autofocus
                       single-line
                       type="text"
                       append-icon="mdi-magnify"
@@ -294,7 +293,7 @@
       </v-col>
     </v-row>
     <v-row no-gutters justify="center" class="about">
-      <v-col cols="12" sm="10" md="7">
+      <v-col cols="12" md="10" lg="7">
         <v-row no-gutters justify="end" align="start">
           <v-col cols="auto">
             <v-btn
@@ -351,7 +350,7 @@
     </v-row>
     <v-row style="max-height: 50px !important">
       <v-col />
-      <v-col cols="12" sm="10" md="7">
+      <v-col cols="12" md="10" lg="7">
         <v-card color="#f0f0f0" flat>
           <v-row align="start">
             <v-col cols="auto">
@@ -366,9 +365,9 @@
       <v-col />
     </v-row>
     <v-row justify="center">
-      <v-col cols="12" sm="10" md="7">
+      <v-col cols="12" md="10" lg="7">
         <v-row>
-          <v-col cols="3">
+          <v-col cols="12" md="4" lg="3">
             <v-card flat>
               <v-row no-gutters>
                 <v-col cols="12">
@@ -633,8 +632,7 @@
                     class="menu-btn"
                   >
                     <div class="menu-btn-text">
-                      Serviço de Informação<br>
-                      ao Cidadadão - SIC
+                      Serviço de Informação ao Cidadadão - SIC
                     </div>
                   </v-btn>
                 </v-col>
@@ -667,8 +665,7 @@
                     class="menu-btn"
                   >
                     <div class="menu-btn-text">
-                      Transparência e<br>
-                      Prestação de Contas
+                      Transparência e Prestação de Contas
                     </div>
                   </v-btn>
                 </v-col>
@@ -679,8 +676,7 @@
                     class="menu-btn"
                   >
                     <div class="menu-btn-text">
-                      Boletim Interno<br>
-                      (Atos e Portarias)
+                      Boletim Interno (Atos e Portarias)
                     </div>
                   </v-btn>
                 </v-col>
@@ -702,8 +698,7 @@
                     class="menu-btn"
                   >
                     <div class="menu-btn-text">
-                      Projetos com as<br>
-                      Fundações de Apoio
+                      Projetos com as Fundações de Apoio
                     </div>
                   </v-btn>
                 </v-col>
@@ -714,8 +709,7 @@
                     class="menu-btn"
                   >
                     <div class="menu-btn-text">
-                      Revisão e Consolidação<br>
-                      de Atos Normativos
+                      Revisão e Consolidação de Atos Normativos
                     </div>
                   </v-btn>
                 </v-col>
@@ -786,8 +780,8 @@ export default {
     reader: function (val) {
       if (val) {
         this.play('Leitor de notícias ativado! Você será redirecionado para o botão do leitor da primeira notícia')
-        focus('noticias-0')
-        this.$refs['noticias-0'].scrollIntoView();
+        focus('noticia-0')
+        this.$refs['noticia-0'].scrollIntoView();
       }
     }
   },
@@ -1016,6 +1010,9 @@ export default {
     white-space: normal;
     max-width: 100%;
     margin-top: 10px;
+    overflow-wrap: break-word !important;
+    overflow-x: initial !important;
+    white-space: normal !important;
   }
   .menu-btn-text{
     text-transform: initial;
@@ -1023,6 +1020,7 @@ export default {
     font-family: "open_sanssemibold",'Open Sans',Arial,Helvetica,sans-serif;
     font-weight: 500;
     max-width: 100%;
+    white-space: normal !important;
   }
   .menu-news-btn{
     border: hidden;
@@ -1032,6 +1030,7 @@ export default {
   }
   .menu-news-first{
     border-top: 2px solid #00500f !important;
+    white-space: normal !important;
   }
   .menu-news-btn-title{
     font-family: "open_sansregular",'Open Sans',Arial,Helvetica,sans-serif;
@@ -1039,6 +1038,7 @@ export default {
     font-size: 1.8em;
     color: #172938;
     text-transform: initial;
+    white-space: normal !important;
   }
   .menu-news-btn-text{
     font-family: "open_sansregular",'Open Sans',Arial,Helvetica,sans-serif;
@@ -1046,6 +1046,7 @@ export default {
     font-size: 1.6em;
     color: #172938;
     text-transform: initial;
+    white-space: normal !important;
   }
   .menu-news-last{
     border-bottom: 3px solid #00500f !important;
@@ -1053,6 +1054,7 @@ export default {
     margin-top: 15px;
     padding-top: 10px !important;
     padding-bottom: 10px !important;
+    white-space: normal !important;
   }
   .news-title{
     color: #00500f;

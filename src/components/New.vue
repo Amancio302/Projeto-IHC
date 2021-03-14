@@ -2,7 +2,7 @@
   <v-row>
     <v-spacer />
     <v-col cols="auto" v-if="reader">
-      <v-btn icon style="background: #f0f0f0" @click="listenTo">
+      <v-btn icon style="background: #f0f0f0" @click="listenTo" title="Leitor da notícia" >
         <v-icon color="#00500f">
           mdi-{{ value !== item.title ? 'volume-high' : 'volume-off'}}
         </v-icon>
