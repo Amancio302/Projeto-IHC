@@ -1,39 +1,3 @@
-<template>
-  <v-container class="pa-0 ma-0" tag="content">
-    <v-row>
-      <v-col>
-        <div class="news-title">
-          Notícias
-        </div>
-      </v-col>
-      <v-spacer/>
-      <v-col cols="auto">
-        <v-btn
-          block
-          text
-          style="border: hidden;
-          background: transparent !important;"
-          to="news"
-        >
-          <div class="news-title">Ativar leitor de notícias</div>
-        </v-btn>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col
-        cols="4"
-        v-for="(noticia, i) in noticias"
-        :key="i"
-      >
-        <New
-          :item="noticia"
-          class="new-container"
-        />
-      </v-col>
-    </v-row>
-  </v-container>
-</template>
-
 <script>
 import New from '@/components/New'
 import myNews from '@/assets/info/news'
@@ -91,13 +55,5 @@ export default {
 </script>
 
 <style>
-  .news-title{
-    color: #00500f;
-    font-size: 2em;
-    font-weight: 700;
-    border: 0;
-  }
-  .new-container{
-    margin-bottom: 30px !important;
-  }
+  
 </style>

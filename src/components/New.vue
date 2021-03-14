@@ -1,18 +1,25 @@
 <template>
   <v-row>
+    <v-spacer />
+    <v-col cols="auto" v-if="reader">
+      <v-btn icon style="background: #f0f0f0" @click="listenTo">
+        <v-icon color="#00500f">
+          mdi-{{ value !== item.title ? 'volume-high' : 'volume-off'}}
+        </v-icon>
+      </v-btn>
+    </v-col>
     <v-col cols="12">
       <v-card
         flat
         width="100%"
         height="100%"
         :href="item.href"
-        @mouseenter="listenTo"
-        @mouseleave="$emit('stop', true)"
       >
         <v-row>
           <v-col cols="12">
             <v-img
               height="180"
+              contain
               :src="item.image"
             />
           </v-col>
@@ -66,17 +73,23 @@
 <script>
 export default {
   name: 'NewComponent',
-  props: ['item'],
+  props: ['item', 'reader', 'value'],
   methods: {
     async listenTo () {
-      const msg =
-        'Categoria da notícia: ' + this.item.tag +
-        '. Postada em: ' + this.item.date + ' ' + this.item.hour +
-        '. Título da notícia: ' + this.item.title + 
-        '. Descrição da Imagem: ' + this.item.alt +
-        '. Resumo da Notícia: ' + this.item.text +
-        '. Fim do resumo. Clique na notícia para saber mais.'
-      this.$emit('listen', msg)
+      if (this.value === this.item.title) {
+        this.$emit('input', undefined)
+        this.$emit('stop', true)
+      } else {
+        const msg =
+          'Categoria da notícia: ' + this.item.tag +
+          '. Postada em: ' + this.item.date + ' ' + this.item.hour +
+          '. Título da notícia: ' + this.item.title + 
+          '. Descrição da Imagem: ' + this.item.alt +
+          '. Resumo da Notícia: ' + this.item.text +
+          '. Fim do resumo. Clique na notícia para saber mais.'
+        this.$emit('input', this.item.title)
+        this.$emit('listen', msg)
+      }
     }
   }
 }
