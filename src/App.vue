@@ -779,7 +779,7 @@ export default {
   watch: {
     reader: function (val) {
       if (val) {
-        this.play('Leitor de notícias ativado! Você será redirecionado para o botão do leitor da primeira notícia')
+        this.play('Leitor de notícias ativado! Busque pelo Cabeçalho Notícias, e partir deles pelos botões de ler notícia!')
         focus('noticia-0')
         this.$refs['noticia-0'].scrollIntoView();
       }
