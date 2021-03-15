@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-row no-gutters justify="center" align="start">
-      <v-col cols="12" md="10" lg="7">
+      <v-col cols="10" lg="7">
         <v-row no-gutters style="overflow-x: auto">
           <v-col xl="auto">
             <v-btn
@@ -104,7 +104,7 @@
       </v-col>
     </v-row>
     <v-row no-gutters justify="center" class="header">
-      <v-col cols="12" md="10" lg="7">
+      <v-col cols="10" lg="7">
         <v-row no-gutters justify="center" style="overflow-x: auto">
           <v-col cols="auto">
             <v-row no-gutters>
@@ -293,7 +293,7 @@
       </v-col>
     </v-row>
     <v-row no-gutters justify="center" class="about">
-      <v-col cols="12" md="10" lg="7">
+      <v-col cols="10" lg="7">
         <v-row no-gutters justify="end" align="start">
           <v-col cols="auto">
             <v-btn
@@ -350,7 +350,7 @@
     </v-row>
     <v-row style="max-height: 50px !important">
       <v-col />
-      <v-col cols="12" md="10" lg="7">
+      <v-col cols="10" lg="7">
         <v-card color="#f0f0f0" flat>
           <v-row align="start">
             <v-col cols="auto">
@@ -365,7 +365,7 @@
       <v-col />
     </v-row>
     <v-row justify="center">
-      <v-col cols="12" md="10" lg="7">
+      <v-col cols="10" lg="7">
         <v-row>
           <v-col cols="12" md="4" lg="3">
             <v-card flat>
