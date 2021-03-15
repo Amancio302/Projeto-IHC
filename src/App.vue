@@ -726,7 +726,9 @@
             </v-row>
             <v-row>
               <v-col
-                cols="6"
+                cols="12"
+                md="6"
+                xl="3"
                 v-for="(noticia, i) in noticias"
                 :key="i"
               >
