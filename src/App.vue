@@ -728,7 +728,7 @@
               <v-col
                 cols="12"
                 md="6"
-                xl="3"
+                xl="4"
                 v-for="(noticia, i) in noticias"
                 :key="i"
               >
